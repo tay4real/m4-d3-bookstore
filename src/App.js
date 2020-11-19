@@ -7,8 +7,9 @@ import Horror from "./data/horror.json";
 import Romance from "./data/romance.json";
 import Scifi from "./data/scifi.json";
 
-import WarningSign from "./components/WarningSign";
-import MyBarge from "./components/MyBarge";
+import MyNav from "./components/MyNav";
+import MyWelcome from "./components/MyWelcome";
+import MyFooter from "./components/MyFooter";
 import BookList from "./components/BookList";
 
 let books = {
@@ -25,9 +26,10 @@ function App() {
   console.log(books);
   return (
     <div className="App">
-      <WarningSign text="This is a warning" />
-      <MyBarge text="New" color="primary" />
+      <MyNav title="Glitzsint" />
+      <MyWelcome />
       <BookList books={books} booksCategories={booksCategories} />
+      <MyFooter />
     </div>
   );
 }
